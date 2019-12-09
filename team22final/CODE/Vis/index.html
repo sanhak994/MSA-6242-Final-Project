@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Quantifying Academic Success</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main_style.css">
+  </head>
+  <body class="bg-dark main_screen">
+
+    <!--NAVBAR -->
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #fcba03;">
+        <a class="navbar-brand" href="#">
+          <img src="static_images/techlogo.png" width="50" height="30" alt="">
+        </a>
+        <a class="navbar-brand index_nav" href="index.html">Quantifying Academic Success</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto pr-5">
+            <li class="nav-item"><a class="nav-link" href="Rshiny.html">Prediction App</a></li>
+            <li class="nav-item"><a class="nav-link" href="StatesMap/multi_map.html">Choropleth</a></li>
+            <li class="nav-item"><a class="nav-link" href="heatmap/heatmap.html">Heatmap</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--NAVBAR -->
+
+<svg height=100></svg>
+
+<div class="container">
+  <div id="inJumbo" class="jumbotron">
+
+    <h1 id='main_text'>Quantifying Academic Success</h1>
+    <h4 id='main_text'>Team 22: 6242 Final Project</h4>
+    <p id='main_text'>Though there have been many studies on factors that contribute to educational success, many of them focus only on a limited amount of data
+and are often difficult to interpret. Our project aims to bring together nationwide data to determine social, economic, and policy-related factors that
+are important to educational success, and to visualize that data over time.
+We bring in a wide variety of data into easy to understand
+visualizations and a custom application that will empower decision-makers to understand the
+important contributors to education and how those change over time to better inform
+policy.</p>
+<br><br>
+  <p id='main_text'>Please use the navbar above to navigate our website</p>
+
+  <br>
+  <p id='main_text' class='contact'>Contact information located at bottom of page (click on picture)</p>
+
+  </div>
+
+  <div id='inJumbo' class="jumbotron">
+
+
+
+    <h4 id='main_text'>Project Outline</h4>
+
+    <ul id='main_text'>
+      <li>In order to make statistically valid inferences we create a Linear regression model and use ML methods such as Random Forest and Boosted Trees</li>
+      <li>Our LinReg model is generated using a stepwise method that maximizes validation R-Squared. Our ML methods use a Bootstrapped sample of our smaller data and train on only 70% of the 5000 Bootstrapped sampled values</li>
+      <li>Our best model in terms of explaining the variability in average scores is a Boosted Tree. It is mostly a black box but it can offer a very precise estimate of average scores for decision makers. They can use our R-Shiny application to test out a range of values</li>
+      <li>Our R-Shiny app also allows users to generate their own models using parameters they might find to be more relevant to their specific situation or if they want to continue exploring our massive dataset, which no other academic project based on educational data allows</li>
+      <li>Our interactive visualizations show a variety of information by year in a clear and concise way with popup overlays that offers further information</li>
+    </ul>
+  </div>
+
+  <br><br>
+
+  <div id="outJumbo" class="container">
+    <h4>Team members</h4>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="https://www.linkedin.com/in/jared-babcock/">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/jared.png" alt=""></div>
+        </a>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="https://www.linkedin.com/in/sanjeedhakim/">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/sanjeed.png" alt=""></div>
+        </a>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="https://www.linkedin.com/in/gniehaus/">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/grayson.png" alt=""></div>
+        </a>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="https://www.linkedin.com/in/nathaniel-rich/">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/nathan.png" alt=""></div>
+        </a>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="#">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/mat.png" alt=""></div>
+        </a>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-4">
+        <a href="https://www.linkedin.com/in/fsackfield/">
+          <img class='img-fluid img-thumbnail' src="static_images/team_pics/fred.png" alt=""></div>
+        </a>    </div>
+
+    <br><br>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>

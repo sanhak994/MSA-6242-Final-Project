@@ -1,0 +1,10 @@
+name: appdir
+title:
+username:
+account: dva-education-project
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1541813
+bundleId: 2627696
+url: https://dva-education-project.shinyapps.io/appdir/
+when: 1575085879.67336

@@ -1,0 +1,36 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 50px;
+}
+
+#outJumbo{
+  color:white;
+}
+
+.contact{
+  font-size: 0.8em;
+}
+
+.main_screen{
+  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8)),url('static_images/gatech.jpg');
+  background-size: cover;
+}
+
+#inJumbo{
+  background: rgba(0,0,0,0.6)
+}
+
+#main_text{
+  opacity: 1;
+  color:white;
+}
+
+/* .index_nav {
+  font-size: 3vw;
+} */
+
+@media screen and (max-width: 480px) {
+    .index_nav {
+         font-size:50%;
+    }
+}

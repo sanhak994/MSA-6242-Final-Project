@@ -1,0 +1,18 @@
+colname,type,description
+avg_att_rate,num,average public school attendance rate
+grad_rate,num,averaged freshman graduation rate of public high school students
+povrate,num,estimated pct of individuals living in poverty
+wic_total,num,"total participation in Women, Infants, and Children Program"
+health_rank,num,United Health Foundation ranking of overall health
+pop_govhealthins,num,number of people (in thousands) that have govt health insurance
+anti_education,num,estimated proportion of citizens who believe spending too much on education
+party_state,num,proportion of Democratic identifiers minus proportion of Republican identifiers (positive means more Democratic)
+policy_mood,num,"measure of Stimson's policy mood (Enns, Koch. 2013)"
+innovatescore,num,"Policy Innovativeness Score (Boehmke, Skinner. 2012) (higher indicates more innovative)"
+pollib_median,num,"policy liberalism, median"
+AVG_ALL_SCORES,num,average score for 4th and 8th graders taking the math and reading NAEP exam
+TOTAL_REVENUE,num,total amount of revenue for the state
+INSTR_TOTAL_EXP,num,total expenditure on instruction for the state
+MEDIAN_INCOME,num,median income for the state
+ALL_STUDENT_TEACHER_RATIO,num,ratio of students to teachers for the state
+,,

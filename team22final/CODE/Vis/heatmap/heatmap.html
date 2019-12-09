@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Socioeconomic Variations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main_style.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-dark">
+
+
+    <!--NAVBAR -->
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #fcba03;">
+        <a class="navbar-brand" href="#">
+          <img src="../static_images/techlogo.png" width="50" height="30" alt="">
+        </a>
+        <a class="navbar-brand pl-1" href="../index.html">Home</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto pr-5">
+            <li class="nav-item"><a class="nav-link" href="../Rshiny.html">Prediction App</a></li>
+            <li class="nav-item"><a class="nav-link" href="../StatesMap/multi_map.html">Choropleth</a></li>
+            <li class="nav-item"><a class="nav-link" href="../heatmap/heatmap.html">Heatmap</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--NAVBAR -->
+
+  <svg height=80></svg>
+
+    <div class="container">
+        <h2 class='text-white text-center'>Socioeconomic Variations</h2>
+        <div class="text-center">
+          <div class="dropdown">
+              <button class="dropbtn">Select Metric</button>
+              <div class="catfilter"></div>
+          </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+      <div class="titleDropdown"></div>
+
+
+      <!-- <p class='range'>Range</p></div> -->
+
+      <div id="tooltip"></div>
+
+      <div id="my_dataviz"></div>
+
+      <div class="firstrow"></div>
+  </div>
+
+  <div class="container">
+        <p class="text-white text-center">If you do not see the heatmap, please disable adblock and refresh the page.</p>
+  </div>
+
+  </body>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="heatmap.js"></script>
+</html>
