@@ -1,0 +1,79 @@
+---
+title: "InitialDataExploration"
+author: "Jared Babcock"
+date: "10/25/2019"
+output: html_document
+---
+
+## Initial Data Exploration Using states_all.csv
+
+## IMPORTANT: Data after row 1280 were territories, etc, we are less interested in those, so only use data[1:1280,]. We keep all 50 states and Washington DC (but it may be worth removing later)
+
+## Look at the relationships between revenue and time and expenditure and time
+
+```{r}
+dat.full <- as.data.frame(read.table('states_all.csv',header=TRUE,sep=','))
+
+dat <- dat.full[seq(1,1280,1),]
+
+states_list <- unique(dat$STATE)
+
+revenue.coeffs <- c()
+expenditure.coeffs <- c()
+for (s in states_list) {
+  data.state <- dat[dat$STATE == s,]
+  
+  model.revenue <- lm(TOTAL_REVENUE~YEAR,data=data.state)
+  coeff <- model.revenue$coefficients[2]
+  revenue.coeffs <- c(revenue.coeffs,coeff)
+  
+  model.expenditure <- lm(TOTAL_EXPENDITURE~YEAR,data=data.state)
+  coeff <- model.expenditure$coefficients[2]
+  expenditure.coeffs <- c(expenditure.coeffs,coeff)
+}
+
+# Adapted from the SAT example in class
+revenue.order.vec <- order(revenue.coeffs, decreasing = TRUE)
+revenue.states <- factor(as.data.frame(states_list)[revenue.order.vec, 1])
+expenditure.order.vec <- order(expenditure.coeffs, decreasing = TRUE)
+
+difference.table <- data.frame(State = revenue.states, Revenue_Coeff = as.numeric(revenue.coeffs[revenue.order.vec], 1),Expenditure_Coeff = as.numeric(expenditure.coeffs[revenue.order.vec],1))
+
+# NOTE: this table is ordered by revenue coefficient
+difference.table
+```
+
+This table compares the revenue coefficient (relationship between revenue and time) for a given state, and the expenditure coefficient (relationship between expenditure and time) for a given state. We can see that states where revenue grows more also see expenditure grow more, which is to be expected. However, there are some states where the order is not perfect (take Indiana and Connecticut for example).
+
+The states with the strongest positive relationship between revenue/expenditure growth and time are California, New York, and Texas, and the lowest include North and South Dakota, Montana, and Washington DC.
+
+## We want to look at relationship between expenditure and revenue (expenditure is the response here)
+
+```{r}
+dat.full <- as.data.frame(read.table('states_all.csv',header=TRUE,sep=','))
+
+dat <- dat.full[seq(1,1280,1),]
+
+states_list <- unique(dat$STATE)
+
+coeffs <- c()
+for (s in states_list) {
+  data.state <- dat[dat$STATE == s,]
+  
+  model <- lm(TOTAL_EXPENDITURE~TOTAL_REVENUE,data=data.state)
+  coeff <- model$coefficients[2]
+  coeffs <- c(coeffs,coeff)
+}
+
+# Adapted from the SAT example in class
+order.vec <- order(coeffs, decreasing = TRUE)
+states <- factor(as.data.frame(states_list)[order.vec, 1])
+
+t <- data.frame(State = states, Coeff = as.numeric(coeffs[order.vec], 1))
+
+t
+```
+
+This table looks at the relationship between revenue and expenditure. Coeff > 1 means that as revenue increases, expenditure increases FASTER. Coeff < 1 means that as revenue increases, expenditure increases SLOWER. Coeff = 1 means that revenue and expenditure increase at similar rates.
+
+From the table we see that North Dakota, Florida, and Arkansas have the most positive linear relationship between revenue and expenditure, and Idaho, Indiana, and Hawaii have the least positive.
